@@ -1,0 +1,40 @@
+1.  Write the SQL to create tables for Books (id, title, author_id) and Authors (id, name)
+
+
+2.  Write the SQL to get all Books
+
+3.  Write the SQL to get all Authors
+
+4.  Write the SQL to create a new book, given the title and author id
+
+5.  Write the SQL to create a new author, given the author's name
+
+6.  Write the SQL to get all Books by a given author, given the author's id
+
+7.  Write the SQL to get all Books by a given author, given the author's name
+
+8.  Write the SQL to update a Book's title
+
+<<-SQL
+  CREATE TABLE IF NOT EXIST Books (id INTEGER PRIMARY KEY , title TEXT, author_id Integer);
+SQL
+
+<<-SQL
+CREATE TABLE IF NOT EXIST Authors (id PRIMARY INTEGER, name text);
+
+SQL
+
+SELECT * FROM Books;
+
+SELECT * FROM Authors;
+
+INSERT INTO Books (title, author_id) VALUES ("My Sad Life," 27);
+
+INSERT INTO AuthorS (name) VALUES ("TC")
+
+SELECT * FROM Books WHERE author_id = 27
+
+
+SELECT * FROM Books JOIN authors ON books.author_id = author.id WHERE authors.name = "MARK TWAIN"
+
+UPDATE Books SET title = "new title" where title = "old title";
